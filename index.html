@@ -73,7 +73,7 @@
                 
                 <p class="mbr-text pb-3 mbr-fonts-style display-5">
                     They frag out, you cash out. ggFantasy is an Esports daily fantasy platform. &nbsp;Battle head to head or compete in larger pools with tons of other players for larger cash payouts or prizes. Maybe you just want to crush your friends? Create a friends league and win bragging rights. Sit tight, we are coming soon!</p>
-                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="https://ggfantasy.com">Coming Soon</a></div>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" id='open-popup'>Sign up for the Alpha</a></div>
             </div>
         </div>
     </div>
@@ -160,6 +160,13 @@
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
   
-  
+  <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+  <script type="text/javascript">
+	function showMailingPopUp() {
+		window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"1b435ba89d9b48f0019b3e411","lid":"37be2e988a","uniqueMethods":true}) })
+		document.cookie='MCPopupClosed=;expires=Thu, 01 Jan 1970 00:00:00 UTC';
+ 	};
+	document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+  </script>  
 </body>
 </html>
